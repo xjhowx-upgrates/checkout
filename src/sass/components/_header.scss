@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.header {
+  background-image: url('../../assets/images/wave-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30%;
+  padding-bottom: map-get($map: $sizes, $key: 20);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  h1 {
+    color: white;
+    font-size: clamp($fs-32, 4vw, $fs-64);
+    font-weight: $fw-700;
+    padding-bottom: map-get($map: $sizes, $key: 8);
+
+  }
+  h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: clamp($fs-10, 4vw, $fs-16);
+    letter-spacing: 1.6px;
+    font-weight: $fw-700;
+    padding: 0 map-get($map: $sizes, $key: 10);
+  }
+}

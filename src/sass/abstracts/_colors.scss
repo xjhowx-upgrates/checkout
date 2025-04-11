@@ -1,0 +1,21 @@
+$accent-color: #2bb6bc;
+$lighten-accent-color: lighten($accent-color, 42%);
+
+$dark-color: #5e6278;
+$lighten-dark-color: lighten($dark-color, 42%);
+
+$colors: (
+  neutral: (
+    600: #{$dark-color},
+    500: #a7a2a2,
+    400: #e1dada,
+    300: #f4f4f4,
+    200: #fbfbfb,
+    100: #ffffff,
+  ),
+  primary: (
+    500: #{$accent-color},
+    400: #f85f5f,
+    300: #5ff879,
+  ),
+);

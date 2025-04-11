@@ -1,0 +1,34 @@
+$sizes: (
+  8: 0.5rem,
+  10: 0.625rem,
+  12: 0.75rem,
+  14: 0.875rem,
+  16: 1rem,
+  20: 1.25rem,
+  24: 1.5rem,
+  32: 2rem,
+  36: 2.25rem,
+  64: 4rem,
+);
+
+$fs-10: map-get($map: $sizes, $key: 10);
+$fs-12: map-get($map: $sizes, $key: 12);
+$fs-14: map-get($map: $sizes, $key: 14);
+$fs-16: map-get($map: $sizes, $key: 16);
+$fs-20: map-get($map: $sizes, $key: 20);
+$fs-24: map-get($map: $sizes, $key: 24);
+$fs-32: map-get($map: $sizes, $key: 32);
+$fs-64: map-get($map: $sizes, $key: 64);
+
+$fw-400: 400;
+$fw-600: 600;
+$fw-700: 700;
+
+$gap: 2rem;
+$section-padding: 3rem;
+
+$container-inline-padding: 2rem;
+$container-max-width: 77.75rem;
+$container-max-width-wide: 100rem;
+
+

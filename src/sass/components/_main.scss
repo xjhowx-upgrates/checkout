@@ -1,0 +1,94 @@
+@use "../abstracts" as *;
+
+.main {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  @include breakpoint-up(large) {
+    background-image: url("../../assets/images/people.png");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  @include breakpoint(small) {
+    padding-top: $section-padding - 2rem;
+  }
+
+  .form {
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: $gap;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  h3 {
+    color: $dark-color;
+    font-size: map-get($map: $sizes, $key: 16);
+    font-weight: $fw-700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+
+    grid-column: 1 / -1;
+
+    strong {
+      font-size: $fs-20;
+      color: $accent-color;
+    }
+
+    @include breakpoint(small) {
+      text-align: center;
+    }
+  }
+}
+
+.count {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $gap;
+  place-content: center;
+
+  &__info {
+    display: flex;
+    gap: $gap;
+    align-items: center;
+    &__total {
+      p {
+        color: $accent-color;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: $fw-700;
+        font-size: map-get($map: $sizes, $key: 16);
+        margin-bottom: 0.2rem;
+      }
+      span {
+        background-color: $lighten-accent-color;
+        font-size: map-get($map: $sizes, $key: 32);
+        font-weight: $fw-700;
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 0 map-get($map: $sizes, $key: 16);
+        color: $accent-color;
+        text-align: center;
+      }
+    }
+  }
+
+  &__single {
+    p {
+      color: $dark-color;
+      font-size: map-get($map: $sizes, $key: 16);
+      font-weight: $fw-700;
+      &:first-child {
+        margin-top: map-get($map: $sizes, $key: 10);
+      }
+    }
+
+    strong {
+      color: $accent-color;
+    }
+  }
+}
