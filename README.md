@@ -105,3 +105,4 @@ Execute o comando de testes na pasta do projeto.
 $ npm run test
 ```
 "# checkout" 
+"# checkout" 
